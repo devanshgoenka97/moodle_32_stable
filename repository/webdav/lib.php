@@ -72,7 +72,7 @@ class repository_webdav extends repository {
     }
     public function get_file($url, $title = '') {
         $url = urldecode($url);
-        $path = $this->prepare_file();
+        $path = $this->prepare_file($title);
         if (!$this->dav->open()) {
             return false;
         }
